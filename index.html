@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" x-data="darkMode" :class="{'dark' : darkMode  }">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Progect One</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./bootstrap-icons-1.11.1">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+
+</head>
+
+
+<body class="body-dark">
+
+    <div class="d-flex justify-content-end p-4 align-items-center">
+        <img src="bootstrap-icons-1.11.1/bootstrap-icons-1.11.1/sun.svg" alt="" class="ps-1 dark-text-white">
+        <div class="form-check form-switch">
+            <input x-model="darkMode" type="checkbox" class="form-check-input darkmode-switch"
+                id="flexSwitchCheckDefault">
+        </div>
+
+        <img src="bootstrap-icons-1.11.1/bootstrap-icons-1.11.1/moon-stars.svg" alt="" class="pe-2 dark-text-white">
+    </div>
+
+    <header class="header text-gray dark-text-whit">
+        <div class="container">
+            <div class="row text-center">
+                <h2 class="fw-bold"><span class="text-primary">لورم ایپسوم</span> متن ساختگی <span id="text"></span>
+                </h2>
+                <p class="lh-lg">لورم ایپسوم با متن ساختگی و تولید نامفهوم با طراحان گرافیکی است</p>
+            </div>
+
+            <div x-data="coundown" class="row justify-content-center countdown">
+                <div>
+                    <h3 class="fw-bold" x-text="days"></h3>
+                    <h5 class="mb-0">روز</h5>
+                </div>
+
+                <div>
+                    <h3 class="fw-bold" x-text="hours"></h3>
+                    <h5 class="mb-0">ساعت</h5>
+                </div>
+
+                <div>
+                    <h3 class="fw-bold" x-text="minutes"></h3>
+                    <h5 class="mb-0">دقیقه</h5>
+                </div>
+
+                <div>
+                    <h3 class="fw-bold" x-text="seconds"></h3>
+                    <h5 class="mb-0">ثانیه</h5>
+                </div>
+            </div>
+
+
+            <div class="row mt-5 justify-content-center text-center">
+                <div class="col-12">
+                    <h5>لورم ایپسوم ساختگی با تولید نامفهوم</h5>
+                </div>
+
+                <div class="col-12 col-lg-6 col-sm-12">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control">
+                        <button class="btn btn-primary" type="button">عضویت</button>
+
+                    </div>
+
+                </div>
+                <div class="col-12 pt-3 social-links">
+                    <a href=""> <img src="bootstrap-icons-1.11.1/bootstrap-icons-1.11.1/twitter.svg" alt=""> </a>
+                    <a href=""><img src="bootstrap-icons-1.11.1/bootstrap-icons-1.11.1/facebook.svg" alt=""> </a>
+                    <a href=""><img src="bootstrap-icons-1.11.1/bootstrap-icons-1.11.1/instagram.svg" alt=""></a>
+                    <a href=""> <img src="bootstrap-icons-1.11.1/bootstrap-icons-1.11.1/linkedin.svg" alt=""></a>
+
+                </div>
+
+            </div>
+
+
+    </header>
+
+
+    <section class="contact">
+        <div class="container py-5">
+            <div class="row text-center justify-content-center">
+                <h2 class="fw-bold">ارتباط با ما</h2>
+                <hr>
+            </div>
+
+            <div class="row gy-3">
+                <div class="col-lg-5">
+                    <div class="card">
+                        <div class="d-flex align-items-center">
+                            <img class="me-3 ms-2" src="./bootstrap-icons-1.11.1/bootstrap-icons-1.11.1/geo-alt.svg"
+                                alt="">
+                            <div>
+                                <h5 class="fw-bold">ایمیل:</h5>
+                                <p class="bm-0">info@gmail.com</p>
+                            </div>
+                        </div>
+
+
+                        <div class="d-flex align-items-center my-4">
+                            <img class="me-3 ms-2" src="./bootstrap-icons-1.11.1/bootstrap-icons-1.11.1/envelope.svg"
+                                alt="">
+                            <div>
+
+                                <h5 class="fw-bold">شماره تماس:</h5>
+                                <p class="bm-0">0098334445555</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <img class="me-3 ms-2" src="./bootstrap-icons-1.11.1/bootstrap-icons-1.11.1/phone.svg"
+                                alt="">
+                            <div>
+
+                                <h5 class="fw-bold">آدرس:</h5>
+                                <p class="bm-0">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+                            </div>
+                        </div>
+
+                        <div id="map" class="mt-4" style="height: 325px;"></div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="card h-100">
+                        <form action="£" class="form-contact mt-2 h-100 gy-md-3" style="padding: 20px;">
+
+                            <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
+
+                                <div class="col-md-6">
+                                    <label class="form-falbel">نام</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-falbel">ایمیل</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-falbel">موضوع</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-falbel">پیام</label>
+                                <textarea class="form-control" rows="10"></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center pt-4">
+                                <button class="btn btn-primary">ارسال پیام</button>
+                            </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <script src="bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/ityped@1.0.3"></script>
+    <script>
+        const textElement = document.querySelector('#text');
+        ityped.init(textElement, { strings: ['متن ساختگی با تولید', 'متن ساختگی با تولید'] });
+
+    </script>
+
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('darkMode', () => ({
+                darkMode: true,
+
+            })),
+
+                Alpine.data('coundown', () => ({
+                    days: '00',
+                    hours: '00',
+                    minutes: '00',
+                    seconds: '00',
+
+                    init() {
+                        let endDate = new Date(2021, 11, 1).getTime();
+
+                        setInterval(() => {
+                            let nowDate = new Date().getTime();
+                            let time = nowDate - endDate;
+                            if (time >= 0) {
+                                this.days = this.format(Math.floor(time / (1000 * 60 * 60 * 24)));
+                                this.hours = this.format(Math.floor(time % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
+                                this.minutes = this.format(Math.floor(time % (1000 * 60 * 60) / (1000 * 60)));
+                                this.seconds = this.format(Math.floor(time % (1000 * 60) / 1000));
+                            }
+                        }, 1000)
+                    },
+                    format(num) {
+                        return num < 10 ? '0' + num : num;
+                    }
+
+                }))
+
+
+
+
+        })
+
+
+
+    </script>
+
+    <script>
+
+        const map = L.map('map').setView([51.505, -0.09], 13);
+
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        const marker = L.marker([51.5, -0.09]).bindPopup("herat").addTo(map).openPopup();
+    </script>
+</body>
+
+</html>

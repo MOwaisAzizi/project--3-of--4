@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "vazir";
+    src: url(../fonts/Vazir.eot);
+
+    src: url("../fonts/Vazir.eot?#iefix") format("embeddded-opentype"),
+        url("../fonts/Vazir.woff2") format("woff2"),
+        url("../fonts/Vazir.woff") format("woff"),
+        url("../fonts/Vazir.ttf") format("truetype"),
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "vazir" !important;
+    background: url(/images/bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dark .body-dark {
+    background: url(/images/bg-dark.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.dark-text-white {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.dark .dark-text-whit {
+    color: white !important;
+}
+
+.header {
+    padding-top: 90px;
+}
+
+.text-gray {
+    color: rgb(52, 50, 50) !important;
+}
+
+.header .countdown div {
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 8px;
+    margin: 10px 10px;
+    width: 100px;
+    padding: 15px 0;
+}
+
+@media (max-width : 575px) {
+    .header .countdown div {
+        margin: 10px 10px;
+        width: 70px;
+        padding: 10px 0;
+    }
+}
+
+.header .social-links a {
+    font-size: 16;
+    color: white;
+    margin: 0 3px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+    border: solid white 1px;
+    transition: all 0.3s;
+}
+
+.header .social-links a :hover {
+    background-color: blue;
+    border: blue solid 1px;
+
+}
+
+.contact hr {
+    width: 80px;
+    height: 5px;
+}
+
+.contact .card {
+    border-top: 4px solid rgb(74, 74, 241);
+    border-bottom: 4px solid rgb(47, 47, 244);
+    padding: 30px;
+    border-radius: 0.25rem;
+    background: rgba(255, 255, 255, 0.06);
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+
+}
+
+.contact .card img {
+    width: 30px;
+    color: white;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.01);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.contact .card img:hover {
+    background: blue;
+    border-color: blue;
+    color: white;
+}
+
+.ityped-cursor {
+    font-size: 2.2rem;
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .dark .dark-bg-black {
+    background-color: black !important;
+    
+    } .dark .dark-bg-white {
+    color: white !important;
+    
+    } */
